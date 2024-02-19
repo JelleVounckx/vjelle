@@ -11,28 +11,46 @@
         padding: 0;
     }
     .container {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
     }
     h1 {
-        font-size: 24px;
+        font-size: 40px;
         transition: font-size 0.3s ease;
         cursor: pointer;
     }
     h1:hover {
-        font-size: 36px;
+        font-size: 100px;
     }
     .under-construction {
+        position: relative;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .construction-line {
         position: absolute;
-        top: 50px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: yellow;
-        padding: 5px 10px;
-        border: 2px solid black;
-        font-weight: bold;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(125deg, yellow 0%, yellow 24%, black 25%, black 55%, yellow 56%, yellow 100%);
+
+        background-size: 30px 30px;
+        animation: moveConstructionLine 2s linear infinite;
+    }
+    @keyframes moveConstructionLine {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position:30px 0px;
+        }
+    }
+    .container:hover .construction-line {
+        animation-play-state: paused;
     }
     .buttons {
         position: absolute;
@@ -51,11 +69,11 @@
         <h1>vjelle.be</h1>
     </div>
     <div class="under-construction">
-        Under Construction
+        <div class="construction-line"></div>
     </div>
     <div class="buttons">
-        <button onclick="window.location.href='test1.html'">Test 1</button>
-        <button onclick="window.location.href='test2.html'">Test 2</button>
+        <button onclick="window.location.href='www.watbenjedan.nl'">Martijn</button>
+        <button onclick="window.location.href='vjelle.be'">Jelle</button>
     </div>
 </body>
 </html>
