@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>vjelle.be</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    h1 {
+        font-size: 24px;
+        transition: font-size 0.3s ease;
+        cursor: pointer;
+    }
+    h1:hover {
+        font-size: 36px;
+    }
+    .under-construction {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: yellow;
+        padding: 5px 10px;
+        border: 2px solid black;
+        font-weight: bold;
+    }
+    .buttons {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .buttons button {
+        margin-right: 10px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>vjelle.be</h1>
+    </div>
+    <div class="under-construction">
+        Under Construction
+    </div>
+    <div class="buttons">
+        <button onclick="window.location.href='test1.html'">Test 1</button>
+        <button onclick="window.location.href='test2.html'">Test 2</button>
+    </div>
+</body>
+</html>
