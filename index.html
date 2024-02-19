@@ -13,6 +13,7 @@
     .container {
         position: relative;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
@@ -21,21 +22,17 @@
         font-size: 40px;
         transition: font-size 0.3s ease;
         cursor: pointer;
+        margin-bottom: -30px;
     }
     h1:hover {
         font-size: 100px;
     }
-    .under-construction {
-        position: relative;
-        width: 100%;
-        padding: 10px 0;
-    }
     .construction-line {
         position: absolute;
-        top: 0;
+        bottom: 0px;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 20px;
         background-image: linear-gradient(125deg, yellow 0%, yellow 24%, black 25%, black 55%, yellow 56%, yellow 100%);
 
         background-size: 30px 30px;
@@ -67,8 +64,8 @@
 <body>
     <div class="container">
         <h1>vjelle.be</h1>
-    </div>
-    <div class="under-construction">
+        <br>
+        <h2>Nothing to see here</h2>
         <div class="construction-line"></div>
     </div>
     <div class="buttons">
